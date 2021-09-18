@@ -5,7 +5,7 @@ export default async (caller: Mail): Promise<void> => {
 	const config = await caller.db.getConfig();
 
 	// Edits the Discord status from the bot.
-	caller.bot.editStatus('online', {
+	caller.bot.editStatus('dnd', {
 		name: config?.status || 'DM me for help.',
 		type: config?.statusType as STATUSES ?? 0,
 		url: config?.statusURL
